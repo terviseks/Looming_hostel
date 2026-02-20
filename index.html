@@ -1,0 +1,330 @@
+<!-- 
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Game Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #fbd38d;
+            --text-color: #5d4037;
+            --accent-color: #e2b07e;
+            --white: #ffffff;
+            --green: #4caf50;
+            --nav-height: 70px;
+            --footer-height: 50px;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            overflow: hidden; 
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            flex-shrink: 0;
+            height: var(--nav-height);
+            background: var(--white);
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .logo img { height: 45px; }
+
+        main {
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            scrollbar-width: thin; 
+        }
+
+        header {
+            flex-shrink: 0;
+            background-color: var(--accent-color);
+            min-height: 20vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Barrio', sans-serif;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            color: var(--white);
+            margin: 0;
+            z-index: 10;
+        }
+
+        .shape-divider {
+            position: absolute;
+            bottom: -1px; left: 0; width: 100%; line-height: 0;
+        }
+        .shape-divider svg { width: 100%; height: 50px; fill: var(--primary-bg); }
+
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-content: center;
+        }
+
+
+        .game-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover { transform: translateY(-5px); }
+
+        .game-image {
+            height: 160px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            flex-shrink: 0;
+        }
+
+        .game-info {
+            padding: 20px;
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-info h3 {
+            margin: 0 0 10px 0;
+            font-family: 'Barrio', sans-serif;
+            font-size: 1.4rem;
+        }
+
+        .game-info p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .play-btn {
+            margin-top: auto; 
+            display: block;
+            background-color: var(--green);
+            color: white;
+            padding: 12px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .play-btn:hover { background-color: #388e3c; }
+
+        .coming-soon { filter: grayscale(1); opacity: 0.7; }
+
+        footer {
+            flex-shrink: 0;
+            height: var(--footer-height);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="https://est.loominghostel.ee/wp-content/uploads/2020/11/cropped-Looming_hostel_logo-2.jpg" alt="Looming Hostel Logo">
+        </div>
+        <div class="nav-links">
+            <a href="https://loominghostel.ee/eng/" style="text-decoration:none; color:inherit; font-weight:bold; border:1px solid; padding:5px 10px; border-radius:5px;">Official Site</a>
+        </div>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Eco-Game Hub</h1>
+            <div class="shape-divider">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path></svg>
+            </div>
+        </header>
+
+        <section class="container">
+            <div class="game-grid">
+                
+                <article class="game-card">
+                    <div class="game-image">🌿</div>
+                    <div class="game-info">
+                        <h3>Pipe Garden</h3>
+                        <p>Keep the hostel garden green! Monitor the hydroponic pipes and prevent the plants from drying out.</p>
+                        <a href="game/Pipe_Garden/index.html" class="play-btn">Play Game</a>
+                    </div>
+                </article>
+
+                <article class="game-card coming-soon">
+                    <div class="game-image">♻️</div>
+                    <div class="game-info">
+                        <h3>?</h3>
+                        <p>Coming Soon!</p>
+                        <span class="play-btn">Coming Soon</span>
+                    </div>
+                </article>
+
+                <article class="game-card coming-soon">
+                    <div class="game-image">💡</div>
+                    <div class="game-info">
+                        <h3>?</h3>
+                        <p>Coming Soon!</p>
+                        <span class="play-btn">Coming Soon</span>
+                    </div>
+                </article>
+
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Looming Hostel - Estonia's First Eco-Hostel</p>
+    </footer>
+
+</body>
+</html>
