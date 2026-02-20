@@ -1,0 +1,327 @@
+<!-- 
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+You shouldn't read other people's code without permission!
+Check out this link instead: https://loominghostel.ee/eng/
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe Garden</title>
+    <style>
+        :root {
+            --wall-color: #fbd38d; 
+            --pipe-color: #8e949a; 
+            --glow-light: rgba(200, 230, 255, 0.6);
+            --pot-dry: #8d6e63;
+            --pot-wet: #4caf50;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--wall-color);
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #5d4037;
+        }
+
+        h1 { margin-top: 20px; text-shadow: 1px 1px 2px white; }
+
+        #stats {
+            background: rgba(255,255,255,0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .room-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            height: 500px;
+            border: 10px solid #e2b07e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pipe {
+            width: 110%;
+            height: 50px;
+            background: linear-gradient(to bottom, #a0a6ab, var(--pipe-color), #5d6368);
+            border-radius: 25px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin: 60px 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .grow-light {
+            position: absolute;
+            top: -40px;
+            width: 100%;
+            height: 20px;
+            background: var(--glow-light);
+            filter: blur(10px);
+            border-radius: 50%;
+        }
+
+        .plant-slot {
+            width: 50px;
+            height: 100px;
+            position: relative;
+            bottom: 25px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .plant-slot:hover { transform: scale(1.1); }
+
+        .leaf {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            width: 30px;
+            height: 40px;
+            background-color: var(--pot-wet);
+            border-radius: 50% 50% 10% 10%;
+            transform-origin: bottom center;
+            transition: background-color 1s, height 1s;
+        }
+
+        .leaf-1 { transform: translateX(-50%) rotate(-30deg); }
+        .leaf-2 { transform: translateX(-50%) rotate(0deg); }
+        .leaf-3 { transform: translateX(-50%) rotate(30deg); }
+
+        .soil {
+            position: absolute;
+            bottom: 0;
+            width: 40px;
+            height: 15px;
+            background: #3e2723;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid var(--pipe-color);
+        }
+
+        .dry .leaf {
+            background-color: var(--pot-dry);
+            height: 20px; 
+        }
+
+        .message {
+            margin-top: 20px;
+            text-align: center;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Looming Sustainable Garden</h1>
+    
+    <div id="stats">Garden Health: <span id="health">100</span>%</div>
+
+    <div class="room-container">
+        <div class="pipe">
+            <div class="grow-light"></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+        </div>
+
+        <div class="pipe">
+            <div class="grow-light"></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+            <div class="plant-slot" onclick="water(this)"><div class="leaf leaf-1"></div><div class="leaf leaf-2"></div><div class="leaf leaf-3"></div><div class="soil"></div></div>
+        </div>
+    </div>
+
+    <div class="message">
+        <p>Keep the garden green! <br> 
+        Click the <strong>dry brown plants</strong> to water them.</p>
+    </div>
+
+    <script>
+        const slots = document.querySelectorAll('.plant-slot');
+        const hostelURL = "https://loominghostel.ee/eng/"; // Target website URL
+        let health = 100;
+        let secondsPassed = 0;
+        let gameActive = true;
+
+        function dryRandomPlant() {
+            if (!gameActive) return;
+            const randomIndex = Math.floor(Math.random() * slots.length);
+            const plant = slots[randomIndex];
+            plant.classList.add('dry');
+            
+            // Schedule next dry event
+            const nextEvent = Math.random() * 2000 + 500;
+            setTimeout(dryRandomPlant, nextEvent);
+        }
+
+        function water(element) {
+            if (!gameActive) return;
+            if (element.classList.contains('dry')) {
+                element.classList.remove('dry');
+                health = Math.min(100, health + 15);
+                updateDisplay();
+            }
+        }
+
+        // Health decay logic: 100% to 0% in 30 seconds = 1% every 300ms
+        const healthDecay = setInterval(() => {
+            if (!gameActive) return;
+            
+            health -= 1;
+            updateDisplay();
+
+            if (health <= 0) {
+                gameOver();
+            }
+        }, 100);
+
+        // Win condition logic: Check survival for 60 seconds
+        const winTimer = setInterval(() => {
+            if (!gameActive) return;
+
+            secondsPassed++;
+            if (secondsPassed >= 30) {
+                gameClear();
+            }
+        }, 1000);
+
+        function updateDisplay() {
+            const healthElement = document.getElementById('health');
+            healthElement.innerText = Math.max(0, Math.floor(health));
+            document.body.style.filter = `saturate(${health/100})`;
+        }
+
+        function gameOver() {
+            gameActive = false;
+            clearInterval(healthDecay);
+            clearInterval(winTimer);
+            alert("The garden has dried up. Returning to the hostel...");
+            window.location.href = hostelURL;
+        }
+
+        function gameClear() {
+            gameActive = false;
+            clearInterval(healthDecay);
+            clearInterval(winTimer);
+            alert("Success! You've maintained the garden perfectly. Welcome back to the hostel!");
+            window.location.href = hostelURL;
+        }
+
+        // Start the plant drying loop
+        setTimeout(dryRandomPlant, 1000);
+    </script>
+</body>
+</html>
